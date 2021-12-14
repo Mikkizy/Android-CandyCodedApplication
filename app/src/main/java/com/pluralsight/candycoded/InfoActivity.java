@@ -1,10 +1,13 @@
 package com.pluralsight.candycoded;
 
+import android.content.Intent;
 import android.content.res.Resources;
 import android.content.res.XmlResourceParser;
 import android.net.Uri;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.view.View;
 import android.widget.ImageView;
 import com.squareup.picasso.Picasso;
 import java.io.IOException;
@@ -26,6 +29,14 @@ public class InfoActivity extends AppCompatActivity {
                 into(candyStoreImageView);
 
 
+    }
+    public void creatMapIntent(View view) {
+        Uri myUri = Uri.parse("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");
+        Intent mapIntent = new Intent(Intent.ACTION_VIEW, myUri);
+        mapIntent.setPackage("com.google.android.apps.maps");
+        if (mapIntent.resolveActivity(getPackageManager()) != null) {
+            startActivity(mapIntent);
+        }
     }
 
     // ***
