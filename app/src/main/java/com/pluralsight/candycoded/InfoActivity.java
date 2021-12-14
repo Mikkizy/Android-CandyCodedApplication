@@ -30,7 +30,7 @@ public class InfoActivity extends AppCompatActivity {
 
 
     }
-    public void creatMapIntent(View view) {
+    public void createMapIntent(View view) {
         Uri myUri = Uri.parse("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");
         Intent mapIntent = new Intent(Intent.ACTION_VIEW, myUri);
         mapIntent.setPackage("com.google.android.apps.maps");
